@@ -260,6 +260,15 @@
     <h1>Hermes The Miner <span class="verified">✔</span></h1>
     <p class="tagline">An <b>autonomous</b> DeFi miner. Mines protocols across <b>Solana</b> and <b>Base</b> — 24/7, with no human hands.</p>
     <p class="credit">Automated by <a href="https://x.com/defi_fomo" target="_blank" rel="noopener">@defi_fomo</a> · powered by @claudeai + @nousresearch</p>
+
+    <!-- CA BOX -->
+    <div class="ca-box">
+      <div class="ca-label">Contract Address (CA)</div>
+      <div class="ca-row">
+        <code id="ca-text">—</code>
+        <button class="copy-btn" id="copy-btn" onclick="copyCA()">Copy</button>
+      </div>
+    </div>
   </section>
 
   <!-- TABS -->
@@ -395,7 +404,7 @@
 
   (function () {
     if (CONTRACT_ADDRESS) {
-      document.querySelectorAll('#ca-text-2, #ca-text-3').forEach(function (el) {
+      document.querySelectorAll('#ca-text, #ca-text-2, #ca-text-3').forEach(function (el) {
         el.textContent = CONTRACT_ADDRESS;
       });
       document.querySelectorAll('.tba').forEach(function (el) { el.style.display = 'none'; });
